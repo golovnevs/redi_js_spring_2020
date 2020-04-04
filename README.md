@@ -1,1 +1,2 @@
-My Redi Project HW1
+# REDI Frontend Development 2 -- Spring 2020
+
