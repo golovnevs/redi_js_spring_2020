@@ -1,1 +1,1 @@
-# REDI Frontend Development 2
+# REDI Frontend Development 2 -- Spring 2020
