@@ -11,23 +11,28 @@
 <!--[if gte IE 9]><!-->
 <html>
 <!--<![endif]-->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>My ReDi Project</title>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="Lesson3.css" type="text/css">
 </head>
 <body>
     <header>
         <ul>
-            <li><a id="menu_burger"><img src="burger_button_w.png" height="15px"></a></li>
             <li><a href="">HOME</a></li>
             <li><a href="">ABOUT ME</a></li>
             <li><a href="index.html" class="current_page">BASE PAGE</a></li>
         </ul>
     </header>
     <div class="main">
+        <h2 class="feel_title">Hi! How are you? </h2>
+        <div class="buttons">
+            <button class="feel_button" id="good_button" width="50px">Good</button>
+            <button class="feel_button" id="bad_button" width="50px">Bad</button>
+            <button class="feel_button" id="awesome_button" width="50px">Awesome!</button>
+            <h1 class="feel_answer" id="feel_answer_el">&nbsp;</h1>
+        </div>
         <section class="post">
             <h2 class="post_title">Traveling in Bavaria</h2>
             <div>
@@ -69,14 +74,28 @@
         <p>Made by Sergei Golovnev for REDI: Frontend Development 2</p>
     </footer>
     <script>
-        let menuBurgerButton = document.getElementById("menu_burger");
+        let goodButtonEL = document.getElementById("good_button");
+        let badButtonEL = document.getElementById("bad_button");
+        let awesomeButtonEL = document.getElementById("awesome_button");
+        let feelTitleEl = document.getElementById("feel_answer_el");
 
-        function clickBurgerProcessor() {
-            alert("Burger button was pressed");
-            console.log("Burger button was pressed");
+        function FeelGoodPrinter() {
+            console.log("Good button was pressed");
+            feelTitleEl.textContent = "That's great!";
         }
-        menuBurgerButton.addEventListener("click", clickBurgerProcessor);
+
+        function FeelBadPrinter() {
+            console.log("Bad button was pressed");
+            feelTitleEl.textContent = "Oh, That's bad.";
+        }
+
+        function FeelAwesomePrinter() {
+            console.log("Awesome button was pressed");
+            feelTitleEl.textContent = "That's awesome!";
+        }
+        goodButtonEL.addEventListener("click", FeelGoodPrinter);
+        badButtonEL.addEventListener("click", FeelBadPrinter);
+        awesomeButtonEL.addEventListener("click", FeelAwesomePrinter);
     </script>
 </body>
-
 </html>
