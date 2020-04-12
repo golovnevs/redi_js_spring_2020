@@ -22,51 +22,51 @@
         <ul>
             <li><a href="">HOME</a></li>
             <li><a href="">ABOUT ME</a></li>
-            <li><a href="index.html" class="current_page">BASE PAGE</a></li>
+            <li><a href="index.html" class="currentPage">BASE PAGE</a></li>
         </ul>
     </header>
     <div class="main">
-        <h2 class="feel_title">Hi! How are you? </h2>
+        <h2 class="feelTitle">Hi! How are you? </h2>
         <div class="buttons">
-            <button class="feel_button" id="good_button" width="50px">Good</button>
-            <button class="feel_button" id="bad_button" width="50px">Bad</button>
-            <button class="feel_button" id="awesome_button" width="50px">Awesome!</button>
-            <h1 class="feel_answer" id="feel_answer_el">&nbsp;</h1>
+            <button class="feelButton" id="goodButton">Good</button>
+            <button class="feelButton" id="badButton">Bad</button>
+            <button class="feelButton" id="awesomeButton">Awesome!</button>
+            <h1 class="feelAnswer" id="feelAnswerEl">&nbsp;</h1>
         </div>
         <section class="post">
-            <h2 class="post_title">Traveling in Bavaria</h2>
+            <h2 class="postTitle">Traveling in Bavaria</h2>
             <div>
-                <img class="post_pic" src="travel.jpg">
+                <img class="postPic" src="travel.jpg">
             </div>
-            <div class="post_description">
+            <div class="postDescription">
                 <p>What I miss: I love traveling and miss the nature and landscapes that I see while traveling.</p>
             </div>
-            <div class="post_link">
-                <a class="map_link" href="https://goo.gl/maps/Vx9rXPP3NdG63ysq7" target="_blank">location</a>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/Vx9rXPP3NdG63ysq7" target="_blank">location</a>
             </div>
         </section>
         <section class="post">
-            <h2 class="post_title">Tierpark Hellabrunn</h2>
+            <h2 class="postTitle">Tierpark Hellabrunn</h2>
             <div>
-                <img class="post_pic" src="tierpark.jpg" width=100%>
+                <img class="postPic" src="tierpark.jpg" width=100%>
             </div>
-            <div class="post_description">
+            <div class="postDescription">
                 <p>What I miss: I miss the moments we spent there with my family. Our tickets will end on April 16 :(</p>
             </div>
-            <div class="post_link">
-                <a class="map_link" href="https://goo.gl/maps/XMUj6szEoj6F7ufn6" target="_blank">location</a>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/XMUj6szEoj6F7ufn6" target="_blank">location</a>
             </div>
         </section>
         <section class="post">
-            <h2 class="post_title">Deutsches Museum Verkehrszentrum</h2>
+            <h2 class="postTitle">Deutsches Museum Verkehrszentrum</h2>
             <div>
-                <img class="post_pic" src="museum.jpg" width=100%>
+                <img class="postPic" src="museum.jpg" width=100%>
             </div>
-            <div class="post_description">
+            <div class="postDescription">
                 <p>What I miss: My son loves this museum, and I miss the time I could spend here with him.</p>
             </div>
-            <div class="post_link">
-                <a class="map_link" href="https://goo.gl/maps/WvBUTQBVMSymd4UCA" target="_blank">location</a>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/WvBUTQBVMSymd4UCA" target="_blank">location</a>
             </div>
         </section>
     </div>
@@ -74,10 +74,10 @@
         <p>Made by Sergei Golovnev for REDI: Frontend Development 2</p>
     </footer>
     <script>
-        let goodButtonEL = document.getElementById("good_button");
-        let badButtonEL = document.getElementById("bad_button");
-        let awesomeButtonEL = document.getElementById("awesome_button");
-        let feelTitleEl = document.getElementById("feel_answer_el");
+        let goodButtonEL = document.getElementById("goodButton");
+        let badButtonEL = document.getElementById("badButton");
+        let awesomeButtonEL = document.getElementById("awesomeButton");
+        let feelTitleEl = document.getElementById("feelAnswerEl");
 
         function FeelGoodPrinter() {
             console.log("Good button was pressed");

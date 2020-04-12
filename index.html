@@ -17,51 +17,53 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>My ReDi Project</title>
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <script src="https://kit.fontawesome.com/6e5c3f0332.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <ul>
-            <li><a id="menu_burger"><img src="burger_button_w.png" height="15px"></a></li>
+            <li><a id="menuBurger"><i class="fas fa-bars"></i></a></li>
             <li><a href="">HOME</a></li>
             <li><a href="">ABOUT ME</a></li>
-            <li><a href="index.html" class="current_page">BASE PAGE</a></li>
+            <li><a href="index.html" class="currentPage">BASE PAGE</a></li>
         </ul>
     </header>
     <div class="main">
         <section class="post">
-            <h2 class="post_title">Traveling in Bavaria</h2>
+            <h2 class="postTitle">Traveling in Bavaria</h2>
             <div>
-                <img class="post_pic" src="travel.jpg">
+                <img class="postPic" src="travel.jpg">
             </div>
-            <div class="post_description">
+            <div class="postDescription">
                 <p>What I miss: I love traveling and miss the nature and landscapes that I see while traveling.</p>
             </div>
-            <div class="post_link">
-                <a class="map_link" href="https://goo.gl/maps/Vx9rXPP3NdG63ysq7" target="_blank">location</a>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/Vx9rXPP3NdG63ysq7" target="_blank">location</a>
             </div>
         </section>
         <section class="post">
-            <h2 class="post_title">Tierpark Hellabrunn</h2>
+            <h2 class="postTitle">Tierpark Hellabrunn</h2>
             <div>
-                <img class="post_pic" src="tierpark.jpg" width=100%>
+                <img class="postPic" src="tierpark.jpg" width=100%>
             </div>
-            <div class="post_description">
+            <div class="postDescription">
                 <p>What I miss: I miss the moments we spent there with my family. Our tickets will end on April 16 :(</p>
             </div>
-            <div class="post_link">
-                <a class="map_link" href="https://goo.gl/maps/XMUj6szEoj6F7ufn6" target="_blank">location</a>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/XMUj6szEoj6F7ufn6" target="_blank">location</a>
             </div>
         </section>
         <section class="post">
-            <h2 class="post_title">Deutsches Museum Verkehrszentrum</h2>
+            <h2 class="postTitle">Deutsches Museum Verkehrszentrum</h2>
             <div>
-                <img class="post_pic" src="museum.jpg" width=100%>
+                <img class="postPic" src="museum.jpg" width=100%>
             </div>
-            <div class="post_description">
+            <div class="postDescription">
                 <p>What I miss: My son loves this museum, and I miss the time I could spend here with him.</p>
             </div>
-            <div class="post_link">
-                <a class="map_link" href="https://goo.gl/maps/WvBUTQBVMSymd4UCA" target="_blank">location</a>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/WvBUTQBVMSymd4UCA" target="_blank">location</a>
             </div>
         </section>
     </div>
@@ -69,13 +71,13 @@
         <p>Made by Sergei Golovnev for REDI: Frontend Development 2</p>
     </footer>
     <script>
-        let menuBurgerButton = document.getElementById("menu_burger");
+        let menuBurgerButton = document.getElementById("menuBurger");
 
-        function clickBurgerProcessor() {
+        function handleMenuClick() {
             alert("Burger button was pressed");
             console.log("Burger button was pressed");
         }
-        menuBurgerButton.addEventListener("click", clickBurgerProcessor);
+        menuBurgerButton.addEventListener("click", handleMenuClick);
     </script>
 </body>
 
