@@ -9,4 +9,3 @@ Lesson3.html - added script for feel good/bad/awesome buttons with text in outpu
 Lesson3.css - added rules for or feel good/bad/awesome buttons.
 
 # REDI Frontend Development 2 -- Spring 2020
-
