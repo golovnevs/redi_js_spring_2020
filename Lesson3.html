@@ -15,21 +15,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>My ReDi Project</title>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
-    <script src="https://kit.fontawesome.com/6e5c3f0332.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <link rel="stylesheet" href="Lesson3.css" type="text/css">
 </head>
 <body>
     <header>
         <ul>
-            <li><a id="menuBurger"><i class="fas fa-bars"></i></a></li>
             <li><a href="">HOME</a></li>
             <li><a href="">ABOUT ME</a></li>
             <li><a href="index.html" class="currentPage">BASE PAGE</a></li>
         </ul>
     </header>
     <div class="main">
+        <h2 class="feelTitle">Hi! How are you? </h2>
+        <div class="buttons">
+            <button class="feelButton" id="goodButton">Good</button>
+            <button class="feelButton" id="badButton">Bad</button>
+            <button class="feelButton" id="awesomeButton">Awesome!</button>
+            <h1 class="feelAnswer" id="feelAnswerEl">&nbsp;</h1>
+        </div>
         <section class="post">
             <h2 class="postTitle">Traveling in Bavaria</h2>
             <div>
@@ -71,13 +74,28 @@
         <p>Made by Sergei Golovnev for REDI: Frontend Development 2</p>
     </footer>
     <script>
-        let menuBurgerButton = document.getElementById("menuBurger");
+        let goodButtonEL = document.getElementById("goodButton");
+        let badButtonEL = document.getElementById("badButton");
+        let awesomeButtonEL = document.getElementById("awesomeButton");
+        let feelTitleEl = document.getElementById("feelAnswerEl");
 
-        function handleMenuClick() {
-            alert("Burger button was pressed");
-            console.log("Burger button was pressed");
+        function FeelGoodPrinter() {
+            console.log("Good button was pressed");
+            feelTitleEl.textContent = "That's great!";
         }
-        menuBurgerButton.addEventListener("click", handleMenuClick);
+
+        function FeelBadPrinter() {
+            console.log("Bad button was pressed");
+            feelTitleEl.textContent = "Oh, That's bad.";
+        }
+
+        function FeelAwesomePrinter() {
+            console.log("Awesome button was pressed");
+            feelTitleEl.textContent = "That's awesome!";
+        }
+        goodButtonEL.addEventListener("click", FeelGoodPrinter);
+        badButtonEL.addEventListener("click", FeelBadPrinter);
+        awesomeButtonEL.addEventListener("click", FeelAwesomePrinter);
     </script>
 </body>
 </html>
