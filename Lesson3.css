@@ -57,6 +57,52 @@ header li a {
 	padding: 2em 20vw;
 }
 
+.feelButton {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 10px;
+}
+
+.feelButton:hover {
+	background-color: #6d8263;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 10px;
+}
+
+.feelButton:active {
+	background-color: #5f5f5f;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 10px;
+}
+
+.feelTitle {
+    text-align: center;
+}
+
+.feelAnswer {
+    text-align: center;
+}
+.buttons {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .post {
 	padding: 1em;
 	margin-bottom: 2em;
