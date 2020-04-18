@@ -24,17 +24,17 @@
     <script>
         let strangeButtonEL = document.getElementById("strangeButton");
         let newButtonEL = document.createElement("button");
-        let remButtonEl = document.createElement("button")
-        const initialLabel = "strange Button"
+        let remButtonEl = document.createElement("button");
+        const initialLabel = "strange Button";
 
-        function clickHandler(event) {
+        function clickHandler() {
             alert("Button clicked!");
             console.log("Strange button clicked");
         }
 
-        function mouseOverHandler(event) {
+        function mouseOverHandler() {
             console.log('Mouse over the button');
-            strangeButtonEL.innerText = "Wow! Mouse over the button!"
+            strangeButtonEL.innerHTML = "Wow! Mouse over the button!";
             strangeButtonEL.classList.remove('strangeButton');
             strangeButtonEL.classList.add('mouseOver');
             newButtonEL.innerHTML = "Genereated! Click me!";
@@ -42,17 +42,17 @@
             newButtonEL.classList.add('strangeButton');
             document.body.appendChild(remButtonEl);
             remButtonEl.classList.add('mouseOver');
-            remButtonEl.innerHTML = "RESET"
+            remButtonEl.innerHTML = "RESET";
         }
 
-        function mouseLeaveHandler(event) {
+        function mouseLeaveHandler() {
             console.log('Mouse left the button');
-            strangeButtonEL.innerText = initialLabel;
+            strangeButtonEL.innerHTML = initialLabel;
             strangeButtonEL.classList.remove('mouseOver');
             strangeButtonEL.classList.add('strangeButton');
         }
 
-        function removeButtons(event) {
+        function removeButtons() {
             console.log('Generated buttons removed');
             document.body.removeChild(newButtonEL);
             newButtonEL.classList.remove('mouseOver');
@@ -60,10 +60,10 @@
             document.body.removeChild(remButtonEl);
         }
 
-        function roundNewButton(event) {
-          console.log('New button clicked');
-          newButtonEL.classList.add('clicked');
-          newButtonEL.innerHTML = "Clicked!";
+        function roundNewButton() {
+            console.log('New button clicked');
+            newButtonEL.classList.add('clicked');
+            newButtonEL.innerHTML = "Clicked!";
         }
 
         strangeButtonEL.addEventListener("click", clickHandler);
