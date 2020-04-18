@@ -1,4 +1,4 @@
-# Lesson_05 Classwork - Basic calculator
+# Lesson_04 Classwork - Basic calculator
 Classwork in files - index_calculator.html and calculator.css
 
 # Lesson_03 Homework - Menu button + Buttons with functions.
