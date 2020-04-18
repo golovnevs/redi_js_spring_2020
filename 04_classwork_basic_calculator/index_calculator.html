@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="calculator.css" type="text/css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="inputForms">
+          <h2>Ultrabasic calculator</h2>
+            <input type="number" id="numberInput" class="numberInput" required="required">
+            <button id="calculateButton" class="calculateButton">Calculate</button>
+            <button class="resetButton" onClick="history.go(0)">Reset</button>
+        </div>
+        <div class="numbers">
+            <ul id="numberlList">
+            </ul>
+            <div class="result">
+                <p id="sumTitle" class="sumTitle"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const numberListEl = document.getElementById('numberlList');
+        const numberInputEl = document.getElementById('numberInput');
+        const numberAddBtn = document.getElementById('calculateButton');
+        let sum = 0;
+        let sumEl = document.getElementById("sumTitle");
+
+        function addNumber() {
+            const number = numberInputEl.value;
+            const numberEl = document.createElement('li');
+            numberEl.textContent = number;
+            numberListEl.appendChild(numberEl);
+            numberInputEl.value = '';
+            sum = sum + parseInt(number);
+            console.log(sum);
+            sumEl.textContent = sum;
+        }
+        numberAddBtn.addEventListener('click', addNumber);
+    </script>
+</body>
+
+</html>
