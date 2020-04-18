@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>
+<html class="preIE7 preIE8 preIE9">
+   <![endif]-->
+<!--[if IE 7]>
+   <html class="preIE8 preIE9">
+      <![endif]-->
+<!--[if IE 8]>
+      <html class="preIE9">
+         <![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My ReDi Project</title>
+    <link rel="stylesheet" href="strange_button.css" type="text/css">
+</head>
+
+<body>
+    <button class="strangeButton" id="strangeButton">strange button</button>
+    <script>
+        let strangeButtonEL = document.getElementById("strangeButton");
+        let newButtonEL = document.createElement("button");
+        let remButtonEl = document.createElement("button")
+        const initialLabel = "strange Button"
+
+        function clickHandler(event) {
+            alert("Button clicked!");
+            console.log("Strange button clicked");
+        }
+
+        function mouseOverHandler(event) {
+            console.log('Mouse over the button');
+            strangeButtonEL.innerText = "Wow! Mouse over the button!"
+            strangeButtonEL.classList.remove('strangeButton');
+            strangeButtonEL.classList.add('mouseOver');
+            newButtonEL.innerHTML = "Genereated! Click me!";
+            document.body.appendChild(newButtonEL);
+            newButtonEL.classList.add('strangeButton');
+            document.body.appendChild(remButtonEl);
+            remButtonEl.classList.add('mouseOver');
+            remButtonEl.innerHTML = "RESET"
+        }
+
+        function mouseLeaveHandler(event) {
+            console.log('Mouse left the button');
+            strangeButtonEL.innerText = initialLabel;
+            strangeButtonEL.classList.remove('mouseOver');
+            strangeButtonEL.classList.add('strangeButton');
+        }
+
+        function removeButtons(event) {
+            console.log('Generated buttons removed');
+            document.body.removeChild(newButtonEL);
+            newButtonEL.classList.remove('mouseOver');
+            newButtonEL.classList.remove('clicked');
+            document.body.removeChild(remButtonEl);
+        }
+
+        function roundNewButton(event) {
+          console.log('New button clicked');
+          newButtonEL.classList.add('clicked');
+          newButtonEL.innerHTML = "Clicked!";
+        }
+
+        strangeButtonEL.addEventListener("click", clickHandler);
+        strangeButtonEL.addEventListener("mouseover", mouseOverHandler);
+        strangeButtonEL.addEventListener("mouseleave", mouseLeaveHandler);
+        remButtonEl.addEventListener("click", removeButtons);
+        newButtonEL.addEventListener("click", roundNewButton);
+    </script>
+</body>
+
+</html>
