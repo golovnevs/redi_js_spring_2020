@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="calculator.css" type="text/css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="inputForms">
+          <h2>Ultrabasic calculator</h2>
+            <input type="number" id="numberInput" class="numberInput">
+            <button id="calculateBtn" class="calculateButton">Calculate</button>
+            <button id="resetBtn" class="resetButton">Reset</button>
+        </div>
+        <div class="numbers">
+            <ul id="numberslList">
+            </ul>
+            <div class="result">
+                <p id="sumTitle" class="sumTitle"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const numbersListEl = document.getElementById('numberslList');
+        const numberInputEl = document.getElementById('numberInput');
+        const numberAddBtn = document.getElementById('calculateBtn');
+        const resetBtnEl = document.getElementById('resetBtn');
+        const sumEl = document.getElementById("sumTitle");
+        let sum = 0;
+
+        function reset() {
+           window.history.go(0);
+        }
+
+        function addNumber() {
+            const number = numberInputEl.value;
+            const newNumberEl = document.createElement('li');
+            newNumberEl.textContent = number;
+            numbersListEl.appendChild(newNumberEl);
+            numberInputEl.value = '';
+            sum = sum + parseInt(number);
+            console.log('Summ: ', sum);
+            sumEl.textContent = sum;
+        }
+        resetBtnEl.addEventListener('click', reset);
+        numberAddBtn.addEventListener('click', addNumber);
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,7 @@
-#Homework №3
+# Lesson_04 Classwork - Basic calculator
+Classwork in files - index_calculator.html and calculator.css
+
+# Lesson_03 Homework - Menu button + Buttons with functions.
 
 index.html - burger button with onCklick reaction added.
 
