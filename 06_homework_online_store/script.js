@@ -69,7 +69,7 @@ let bikes = [{
         brand: "Triumph",
         model: "Thruxton",
         engineCapacity: 865,
-        colour: "silver",
+        colour: "black",
         imgSrc: 'images/triumph.jpg',
         price: 6000,
         condition: {
