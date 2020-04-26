@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>
+<html class="preIE7 preIE8 preIE9">
+   <![endif]-->
+<!--[if IE 7]>
+   <html class="preIE8 preIE9">
+      <![endif]-->
+<!--[if IE 8]>
+      <html class="preIE9">
+         <![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My ReDi Project</title>
+    <link rel="stylesheet" href="Lesson3.css" type="text/css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT ME</a></li>
+            <li><a href="index.html" class="currentPage">BASE PAGE</a></li>
+        </ul>
+    </header>
+    <div class="main">
+        <h2 class="feelTitle">Hi! How are you? </h2>
+        <div class="buttons">
+            <button class="feelButton" id="goodButton">Good</button>
+            <button class="feelButton" id="badButton">Bad</button>
+            <button class="feelButton" id="awesomeButton">Awesome!</button>
+            <h1 class="feelAnswer" id="feelAnswerEl">&nbsp;</h1>
+        </div>
+        <section class="post">
+            <h2 class="postTitle">Traveling in Bavaria</h2>
+            <div>
+                <img class="postPic" src="travel.jpg">
+            </div>
+            <div class="postDescription">
+                <p>What I miss: I love traveling and miss the nature and landscapes that I see while traveling.</p>
+            </div>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/Vx9rXPP3NdG63ysq7" target="_blank">location</a>
+            </div>
+        </section>
+        <section class="post">
+            <h2 class="postTitle">Tierpark Hellabrunn</h2>
+            <div>
+                <img class="postPic" src="tierpark.jpg" width=100%>
+            </div>
+            <div class="postDescription">
+                <p>What I miss: I miss the moments we spent there with my family. Our tickets will end on April 16 :(</p>
+            </div>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/XMUj6szEoj6F7ufn6" target="_blank">location</a>
+            </div>
+        </section>
+        <section class="post">
+            <h2 class="postTitle">Deutsches Museum Verkehrszentrum</h2>
+            <div>
+                <img class="postPic" src="museum.jpg" width=100%>
+            </div>
+            <div class="postDescription">
+                <p>What I miss: My son loves this museum, and I miss the time I could spend here with him.</p>
+            </div>
+            <div class="postLink">
+                <a class="mapLink" href="https://goo.gl/maps/WvBUTQBVMSymd4UCA" target="_blank">location</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Made by Sergei Golovnev for REDI: Frontend Development 2</p>
+    </footer>
+    <script>
+        let goodButtonEL = document.getElementById("goodButton");
+        let badButtonEL = document.getElementById("badButton");
+        let awesomeButtonEL = document.getElementById("awesomeButton");
+        let feelTitleEl = document.getElementById("feelAnswerEl");
+
+        function FeelGoodPrinter() {
+            console.log("Good button was pressed");
+            feelTitleEl.textContent = "That's great!";
+        }
+
+        function FeelBadPrinter() {
+            console.log("Bad button was pressed");
+            feelTitleEl.textContent = "Oh, That's bad.";
+        }
+
+        function FeelAwesomePrinter() {
+            console.log("Awesome button was pressed");
+            feelTitleEl.textContent = "That's awesome!";
+        }
+        goodButtonEL.addEventListener("click", FeelGoodPrinter);
+        badButtonEL.addEventListener("click", FeelBadPrinter);
+        awesomeButtonEL.addEventListener("click", FeelAwesomePrinter);
+    </script>
+</body>
+</html>
