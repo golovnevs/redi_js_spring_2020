@@ -1,0 +1,140 @@
+body {
+	font-family: "Segoe UI", Arial, sans-serif;
+	background: #f1f1f1;
+	color: #5f5f5f;
+}
+
+header {
+	letter-spacing: 1px;
+	background: #5f5f5f;
+}
+
+header a {
+	display: inline;
+	color: white;
+	text-decoration: none;
+	padding: 1em;
+}
+
+header a:hover {
+	background: #6d8263;
+	color: #4caf50;
+}
+
+header a:active {
+	text-decoration: underline;
+}
+
+header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+header li a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+.currentPage {
+	background: #4caf50;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menuPic {
+	height: 15px;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	padding: 2em 20vw;
+}
+
+.feelButton {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 10px;
+}
+
+.feelButton:hover {
+	background-color: #6d8263;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 10px;
+}
+
+.feelButton:active {
+	background-color: #5f5f5f;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 10px;
+}
+
+.feelTitle {
+    text-align: center;
+}
+
+.feelAnswer {
+    text-align: center;
+}
+.buttons {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.post {
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+.postTitle {
+	margin-top: 0;
+	padding-left: 1em;
+}
+
+.postPic {
+	width: 100%;
+}
+
+.postDescription {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.mapLink {
+	color: #5f5f5f;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.mapLink:hover {
+	color: #4caf50;
+}
+
+footer {
+	background: #4caf50;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+}
