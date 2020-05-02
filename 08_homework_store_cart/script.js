@@ -85,17 +85,15 @@ let bikes = [{
         },
         inStock: false,
         description: "The Triumph Thruxton is a series of British motorcycles with parallel-twin engines and sports styling." +
-                     " The name Thruxton was first applied to a handbuilt machine for endurance racing in the mid 1960s, " +
+                     "The name Thruxton was first applied to a handbuilt machine for endurance racing in the mid 1960s, " +
                      "and later revived in the 2000s. Production 2004 - 2016"
     }
 ];
 let inCart = [];
 function bikeListDisplay() {
-    for (let i=0; i < bikes.length; i++) {
+    for (let i = 0; i < bikes.length; i++) {
         bikeCard = document.createElement("div");
         bikeCard.setAttribute("class", "card");
-        bikeCard.setAttribute("id", i);
-
         const main = document.getElementById('main');
         bikeCard.innerHTML = ` 
           <h2>${bikes[i].brand} ${bikes[i].model}</h2>
@@ -121,30 +119,17 @@ function bikeListDisplay() {
         main.appendChild(bikeCard);
     }
 };
+
 bikeListDisplay();
-function showCartButton() {
-    document.querySelectorAll('.addToCart').forEach(item => {
-        item.addEventListener('click', event => {
-            addButton()
-        })
-    })
-};
 
-function addButton() {
-    if (inCart.length >0) {
-        console.log('Array not empty');
-    }
-};
-
-showCart.addEventListener('click',cartListDisplay);
+showCart.addEventListener('click', cartListDisplay);
 function cartListDisplay() {
-    let totalSumm=0;
-    for (let i=0; i < inCart.length; i++) {
+    let totalSumm = 0;
+    for (let i = 0; i < inCart.length; i++) {
         totalSumm = totalSumm + inCart[i].price;
         bikeCard = document.createElement("div");
         bikeCard.setAttribute("class", "card");
-        bikeCard.setAttribute("id", i);
-        const main = document.getElementById('cartMain')
+        const main = document.getElementById('cartMain');
         bikeCard.innerHTML = `   
           <h2>${inCart[i].brand} ${inCart[i].model}</h2>
           <img class="bikePic" src="${inCart[i].imgSrc}" />
@@ -158,7 +143,7 @@ function cartListDisplay() {
         main.appendChild(bikeCard);
     }
     main.innerHTML = ` <h1>You have ${inCart.length} items in your cart. Total price: ${totalSumm} Euro.</h1>
-                       <a href="online_store.html" class="navigation"><h3>Back to the catalog</h3></a>
+                       <a href="online_store.html" class="navigation"><h3>Back to the bike list</h3></a>
     `;
 };
 
