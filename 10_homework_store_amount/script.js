@@ -90,6 +90,7 @@ let bikes = [{
     }
 ];
 let inCart = [];
+
 function bikeListDisplay() {
     for (let i = 0; i < bikes.length; i++) {
         bikeCard = document.createElement("div");
@@ -107,9 +108,8 @@ function bikeListDisplay() {
           <li>Engine: ${bikes[i].engineCapacity} cc</li>
           <p>${bikes[i].description}</p>
           <li id="${i}">Avaliable now: ${bikes[i].amount} (almost out of stock)</li>
-            `;}
-
-        else if (bikes[i].amount == 1) {
+            `;
+        } else if (bikes[i].amount == 1) {
             bikeCard.innerHTML = ` 
           <h2>${bikes[i].brand} ${bikes[i].model}</h2>
           <img class="bikePic" id="pic_${i}" src="${bikes[i].imgSrc}" />
@@ -120,9 +120,8 @@ function bikeListDisplay() {
           <li>Engine: ${bikes[i].engineCapacity} cc</li>
           <p>${bikes[i].description}</p>
           <li id="${i}">Avaliable now: ${bikes[i].amount} (last chance)</li>
-            `;}
-
-        else if (bikes[i].amount < 1) {
+            `;
+        } else if (bikes[i].amount < 1) {
             bikeCard.innerHTML = ` 
           <h2>${bikes[i].brand} ${bikes[i].model}</h2>
           <img class="bikePic" id="pic_${i}" src="${bikes[i].imgSrc}" />
@@ -134,9 +133,8 @@ function bikeListDisplay() {
           <li>Engine: ${bikes[i].engineCapacity} cc</li>
           <p>${bikes[i].description}</p>
           <li id=${i}>Out of stock.</li>
-            `;}
-
-        else {
+            `;
+        } else {
             bikeCard.innerHTML = `    
           <h2>${bikes[i].brand} ${bikes[i].model}</h2>
           <img class="bikePic" id="pic_${i}" src="${bikes[i].imgSrc}" />
@@ -147,44 +145,41 @@ function bikeListDisplay() {
           <li>Engine: ${bikes[i].engineCapacity} cc</li>
           <p>${bikes[i].description}</p>
           <li id="${i}">Avaliable now: ${bikes[i].amount}</li>
-            `;}
-
+            `;
+        }
         const buttonElement = document.createElement('button');
         buttonElement.innerText = 'Add to cart';
         buttonElement.setAttribute("class", "button");
-        if (bikes[i].amount ==0){
+        if (bikes[i].amount == 0){
             buttonElement.setAttribute("class", "buttonDisabled");
             buttonElement.setAttribute("disabled", "true");
-        }
-        else {
+        } else {
         buttonElement.setAttribute("id", "addToCart");
         }
         buttonElement.addEventListener('click', function() {
-            inCart.push(bikes[i]);
+          inCart.push(bikes[i]);
             if (bikes[i].amount == 1) {
                 buttonElement.setAttribute("disabled", "true");
                 buttonElement.setAttribute("class", "buttonDisabled");
-                document.getElementById(i).innerHTML= `
-                 <li id=${i}>Out of stock.</li>
-                `;}
-
-            else if (bikes[i].amount > 2 && bikes[i].amount <= 4) {
-                bikes[i].amount = bikes[i].amount-1;
-                document.getElementById(i).innerHTML= `
+                document.getElementById(i).innerHTML = `
+                 <li id = ${i}>Out of stock.</li>
+                `;
+            } else if (bikes[i].amount > 2 && bikes[i].amount <= 4) {
+                bikes[i].amount -= 1;
+                document.getElementById(i).innerHTML = `
                 <li id=${i}>Avaliable now: ${bikes[i].amount} (almost out of stock)</li>
-                `;}
-
-            else if (bikes[i].amount == 2) {
-                bikes[i].amount = bikes[i].amount-1;
+                `;
+            } else if (bikes[i].amount == 2) {
+                bikes[i].amount -= 1;
                 document.getElementById(i).innerHTML= `
                 <li id=${i}>Avaliable now: ${bikes[i].amount} (last chance)</li>
-                `;}
-
-            else {
-                bikes[i].amount = bikes[i].amount-1;
-                document.getElementById(i).innerHTML= `
+                `;
+            } else {
+                bikes[i].amount -= 1;
+                document.getElementById(i).innerHTML = `
                 <li id=${i}>Avaliable now: ${bikes[i].amount}</li>
-                `;}
+                `;
+            }
         });
         bikeCard.appendChild(buttonElement);
         main.appendChild(bikeCard);
@@ -194,6 +189,7 @@ function bikeListDisplay() {
 bikeListDisplay();
 
 showCart.addEventListener('click', cartListDisplay);
+
 function cartListDisplay() {
     let totalSumm = 0;
     for (let i = 0; i < inCart.length; i++) {
